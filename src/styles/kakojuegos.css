@@ -1,0 +1,208 @@
+/* ==========================================================
+   KakoJuegos - Semana 7 (React)
+   Desarrollo Frontend I (PFY2201) - Joaquín Gómez Flores
+
+   Este archivo SOLO complementa a Bootstrap 5.3.
+   Se trabaja con clases propias y con las variables de tema
+   de Bootstrap, sin redefinir selectores generales.
+   ========================================================== */
+
+/* ----- Paleta propia de la tienda ----- */
+:root {
+  --kako-rojo: #e63946;
+  --kako-amarillo: #f1c40f;
+  --kako-verde: #2ecc71;
+  --kako-fondo: #14161c;
+  --kako-superficie: #1e2129;
+  --kako-borde: #2e323d;
+}
+
+/* Se sobrescriben variables del tema oscuro de Bootstrap
+   para que todos los componentes tomen los colores de la tienda */
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--kako-fondo);
+  --bs-tertiary-bg: var(--kako-superficie);
+  --bs-border-color: var(--kako-borde);
+  --bs-danger: var(--kako-rojo);
+  --bs-warning: var(--kako-amarillo);
+}
+
+body {
+  font-family: "Verdana", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+}
+
+/* Al saltar a una sección (#catalogo, #carrito, #contacto) se deja espacio
+   para que la navbar fija no tape el título de la sección */
+#catalogo,
+#carrito,
+#contacto {
+  scroll-margin-top: 80px;
+}
+
+/* ----- Categoría activa en la navbar ----- */
+.btn-categoria {
+  background: none;
+  border: 0;
+  text-align: left;
+}
+
+.btn-categoria.active {
+  color: var(--kako-amarillo) !important;
+  font-weight: bold;
+}
+
+/* ----- Carrusel -----
+   Corrección del feedback de la Semana 6: con el tema oscuro, Bootstrap
+   pinta el texto del caption en negro e invierte los íconos de las flechas.
+   Se fuerza texto claro y controles blancos para que se lean sobre
+   el fondo oscuro semitransparente en las tres portadas. */
+#carouselJuegos .carousel-item img {
+  height: 420px;
+  object-fit: cover;
+}
+
+#carouselJuegos .carousel-caption {
+  color: #ffffff;
+  background-color: rgba(10, 11, 15, 0.8);
+  border-radius: 0.5rem;
+  left: 12%;
+  right: 12%;
+  bottom: 2.5rem;
+  padding: 0.75rem 1rem;
+}
+
+#carouselJuegos .carousel-caption h2,
+#carouselJuegos .carousel-caption p {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Bootstrap deja las flechas al 50% de opacidad; se suben para que se vean siempre */
+#carouselJuegos .carousel-control-prev,
+#carouselJuegos .carousel-control-next {
+  opacity: 0.9;
+}
+
+#carouselJuegos .carousel-control-prev-icon,
+#carouselJuegos .carousel-control-next-icon {
+  filter: none;
+  background-color: rgba(10, 11, 15, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  background-size: 50%;
+}
+
+#carouselJuegos .carousel-indicators [data-bs-target] {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  #carouselJuegos .carousel-item img {
+    height: 220px;
+  }
+}
+
+/* ----- Cards de producto ----- */
+.card-producto {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-producto:hover {
+  border-color: var(--kako-rojo);
+  box-shadow: 0 6px 18px rgba(230, 57, 70, 0.35);
+  transform: translateY(-4px);
+}
+
+.card-producto img {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Etiquetas sobre la portada: categoría a la izquierda, descuento a la derecha */
+.etiqueta-categoria {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.etiqueta-descuento {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.85rem;
+}
+
+/* ----- Precios ----- */
+.precio-normal {
+  color: var(--bs-secondary-color);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.precio-oferta {
+  color: var(--kako-amarillo);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.texto-ahorro {
+  color: var(--kako-verde);
+}
+
+/* ----- Carrito ----- */
+/* El carrito queda fijo al hacer scroll solo en pantallas grandes (sticky-lg-top).
+   El desplazamiento "top" se limita a ese tamaño: en móvil la card es
+   position: relative y un top de 90px la montaría sobre la sección Contacto. */
+@media (min-width: 992px) {
+  .carrito-fijo {
+    top: 90px;
+  }
+}
+
+.lista-carrito .list-group-item {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.miniatura-carrito {
+  width: 56px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.btn-cantidad {
+  width: 30px;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ----- Modal controlado por React ----- */
+.modal-react {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-react img {
+  max-height: 320px;
+  object-fit: cover;
+}
+
+/* ----- Accesibilidad: foco visible al navegar con teclado ----- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--kako-amarillo);
+  outline-offset: 2px;
+}

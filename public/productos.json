@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "State of Decay 2: Juggernaut Edition",
+    "categoria": "Acción",
+    "precio": 14990,
+    "precioOferta": 9990,
+    "imagen": "img/state-of-decay-2.jpg",
+    "plataforma": "Xbox Game Pass para PC",
+    "stock": 12,
+    "descripcion": "Juego de supervivencia sandbox y mundo abierto ambientado en un apocalipsis zombi. Construye tu comunidad y toma decisiones que definen quién sobrevive.",
+    "detalle": "Incluye los tres mapas originales más Providence Ridge, todos los DLC y el modo Heartland. Compatible con juego cooperativo de hasta cuatro jugadores."
+  },
+  {
+    "id": 2,
+    "nombre": "Baldur's Gate 3",
+    "categoria": "RPG",
+    "precio": 29990,
+    "precioOferta": 23990,
+    "imagen": "img/baldurs-gate-3.jpg",
+    "plataforma": "Steam para PC",
+    "stock": 8,
+    "descripcion": "Videojuego de rol con combate por turnos basado en Dungeons & Dragons. Tus elecciones moldean la historia y a tus personajes.",
+    "detalle": "Campaña de más de 100 horas, doce clases jugables y modo cooperativo para cuatro jugadores."
+  },
+  {
+    "id": 3,
+    "nombre": "Grand Theft Auto V Enhanced",
+    "categoria": "Mundo abierto",
+    "precio": 19990,
+    "precioOferta": 11990,
+    "imagen": "img/gta-v-enhanced.jpg",
+    "plataforma": "Epic Games para PC",
+    "stock": 3,
+    "descripcion": "Aventura de acción en el mundo abierto de Los Santos, siguiendo la historia de tres protagonistas conectados por el crimen.",
+    "detalle": "Versión mejorada con trazado de rayos, carga rápida y acceso incluido a GTA Online. Últimas unidades en oferta."
+  },
+  {
+    "id": 4,
+    "nombre": "Elden Ring",
+    "categoria": "RPG",
+    "precio": 34990,
+    "precioOferta": 27990,
+    "imagen": "img/elden-ring.jpg",
+    "plataforma": "Steam para PC",
+    "stock": 6,
+    "descripcion": "Rol de acción en un mundo abierto interconectado, con combate exigente y una progresión de personaje muy libre.",
+    "detalle": "Incluye las Tierras Intermedias completas y soporte para invasiones y cooperativo en línea. Recomendado para jugadores con experiencia en el género."
+  },
+  {
+    "id": 5,
+    "nombre": "Cyberpunk 2077",
+    "categoria": "Mundo abierto",
+    "precio": 24990,
+    "precioOferta": 17490,
+    "imagen": "img/cyberpunk-2077.jpg",
+    "plataforma": "GOG para PC",
+    "stock": 10,
+    "descripcion": "Aventura de rol en primera persona ambientada en Night City, una megaciudad obsesionada con el poder y la modificación corporal.",
+    "detalle": "Árbol de habilidades rediseñado, nueva persecución policial y soporte para trazado de rayos en tiempo real."
+  },
+  {
+    "id": 6,
+    "nombre": "DOOM Eternal",
+    "categoria": "Acción",
+    "precio": 12990,
+    "precioOferta": 8990,
+    "imagen": "img/doom-eternal.jpg",
+    "plataforma": "Steam para PC",
+    "stock": 15,
+    "descripcion": "Acción en primera persona de ritmo rápido, con movilidad vertical constante y un arsenal pensado para no detenerse nunca.",
+    "detalle": "Incluye la campaña completa y el modo Battlemode. Requiere tarjeta gráfica con soporte Vulkan."
+  }
+]
